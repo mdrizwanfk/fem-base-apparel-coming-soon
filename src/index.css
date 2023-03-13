@@ -1,13 +1,103 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./fonts.css";
+
+:root {
+  --breakpoint-mobile-tablet: 425px;
+  --breakpoint-tablet-desktop: 992px;
+
+  font-size: 62.5%;
+
+  --ff-primary: "Josefin Sans", sans-serif;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --fs-body: 1.6rem;
+
+  --clr-pr-1: hsl(0, 36%, 70%);
+  --clr-pr-2: hsl(0, 93%, 68%);
+  --clr-neu-1: hsl(0, 6%, 24%);
+  --clr-gr-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --clr-gr-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Large Viewports */
+@media screen and (min-width: 992px) {
+  :root {
+  }
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Disabling Text Selection by User */
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Disabling Image Dragging */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-400);
 }
