@@ -1,6 +1,7 @@
 {
     "pages": [
         {
+            "id": "comingSoon",
             "name": "Coming Soon",
             "config": {
                 "heading": "we're coming soon",

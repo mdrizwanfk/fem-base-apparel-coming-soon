@@ -3,10 +3,9 @@ import logo from "../assets/images/logo.svg";
 
 const Header = ({ contained = false }) => {
   return (
-    <div className="container">
+    <header className="container" style={{ border: "1px solid black" }}>
       <img src={logo} alt="base apparel logo" />
-      hello world
-    </div>
+    </header>
   );
 };
 
