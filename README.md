@@ -55,6 +55,10 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
+notes: i feel like, a div container with a background image will be much better as the img tag here when setting a height, is distorting the image and it is also not possible to contain/cover the image with direct image tag, if it's background, i could do background-size: cover/contain.
+
+conclusion: just use div container with background image untill you figure out the picture>source>img process.
+
 ### What I learned
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
