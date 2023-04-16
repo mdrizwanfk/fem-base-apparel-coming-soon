@@ -96,7 +96,7 @@ svg {
 }
 
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */ /* this rule is good to have when you have to vertically center and some content then will flow down from that center of screen */
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   font-weight: var(--fw-400);
