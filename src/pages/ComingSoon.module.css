@@ -1,7 +1,36 @@
+.container {
+  max-width: 55rem;
+}
+
+#banner-image {
+  height: 30rem;
+  background-image: url("../assets/images/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .banner-message {
-  background-color: aquamarine;
+  margin: 4rem;
+  text-align: center;
 }
 
 .cs-grid {
   display: grid;
+}
+
+@media screen and (min-width: 992px) {
+  .cs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #banner-image {
+    order: 2;
+    height: 5rem;
+    border: 5px solid green;
+  }
+
+  #banner-message {
+    order: 1;
+  }
 }

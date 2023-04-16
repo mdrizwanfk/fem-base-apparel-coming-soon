@@ -100,4 +100,6 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   font-weight: var(--fw-400);
+  display: grid;
+  justify-content: center;
 }

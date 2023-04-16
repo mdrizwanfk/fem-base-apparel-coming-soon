@@ -1,9 +1,10 @@
 import React from "react";
 import logo from "../assets/images/logo.svg";
+import styles from "./Header.module.css";
 
 const Header = ({ contained = false }) => {
   return (
-    <header className="container" style={{ border: "1px solid black" }}>
+    <header className={styles["container"]}>
       <img src={logo} alt="base apparel logo" />
     </header>
   );
