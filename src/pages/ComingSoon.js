@@ -3,10 +3,11 @@ import React from "react";
 import Header from "../components/Header";
 import data from "../data/constants.json";
 import styles from "./ComingSoon.module.css";
+import iconArrow from "../assets/images/icon-arrow.svg";
 
 const BannerMessage = ({ heading, message }) => {
   return (
-    <article id={styles["banner-message"]} className={styles["banner-message"]}>
+    <article id={styles["banner-message"]} className="text-clr-pr-2">
       <h1 dangerouslySetInnerHTML={{ __html: heading || "lorem ipsum" }}></h1>
       <p>{message || "ipsum lorem"}</p>
     </article>
@@ -26,6 +27,18 @@ const BannerImage = () => {
   // );
 };
 
+const BannerForm = () => {
+  return (
+    <form>
+      <label htmlFor="email"></label>
+      <input type="email" id="email" />
+      <button type="submit">
+        <img src={iconArrow} alt="submit" />
+      </button>
+    </form>
+  );
+};
+
 const ComingSoon = () => {
   const id = "comingSoon";
   const { config } = data.pages.find(({ id: configId }) => configId === id);
@@ -37,6 +50,7 @@ const ComingSoon = () => {
       <section className={styles["cs-grid"]}>
         <BannerImage />
         <BannerMessage heading={heading} message={message} />
+        <BannerForm />
       </section>
     </main>
   );

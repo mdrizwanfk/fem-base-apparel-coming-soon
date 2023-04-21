@@ -1,3 +1,7 @@
+.cs-grid {
+  display: grid;
+}
+
 .container {
   max-width: 55rem;
 }
@@ -9,13 +13,19 @@
   background-size: cover;
 }
 
-.banner-message {
+#banner-message {
   margin: 4rem;
   text-align: center;
 }
 
-.cs-grid {
-  display: grid;
+#banner-message > h1 {
+  text-transform: uppercase;
+}
+
+#banner-message > h1 > .heading-pt-1 {
+}
+
+#banner-message > h1 > .heading-pt-2 {
 }
 
 @media screen and (min-width: 992px) {

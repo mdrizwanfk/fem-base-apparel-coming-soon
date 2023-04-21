@@ -95,6 +95,47 @@ svg {
   }
 }
 
+/* Utility Classes */
+.text-clr-pr-1 {
+  color: var(--clr-pr-1);
+}
+
+.text-clr-pr-2 {
+  color: var(--clr-pr-2);
+}
+
+.text-clr-neu-1 {
+  color: var(--clr-neu-1);
+}
+
+.text-clr-gr-1 {
+  color: var(--clr-gr-1);
+}
+
+.text-clr-gr-2 {
+  color: var(--clr-gr-2);
+}
+
+.bg-clr-pr-1 {
+  color: var(--clr-pr-1);
+}
+
+.bg-clr-pr-2 {
+  color: var(--clr-pr-2);
+}
+
+.bg-clr-neu-1 {
+  color: var(--clr-neu-1);
+}
+
+.bg-clr-gr-1 {
+  color: var(--clr-gr-1);
+}
+
+.bg-clr-gr-2 {
+  color: var(--clr-gr-2);
+}
+
 body {
   /* min-height: 100vh; */ /* this rule is good to have when you have to vertically center and some content then will flow down from that center of screen */
   font-family: var(--ff-primary);
