@@ -14,18 +14,14 @@
 }
 
 #banner-message {
-  margin: 4rem;
+  padding: 3rem;
   text-align: center;
+  background: var(--clr-gr-1);
 }
 
 #banner-message > h1 {
   text-transform: uppercase;
-}
-
-#banner-message > h1 > .heading-pt-1 {
-}
-
-#banner-message > h1 > .heading-pt-2 {
+  font-size: var(--fs-heading);
 }
 
 @media screen and (min-width: 992px) {
