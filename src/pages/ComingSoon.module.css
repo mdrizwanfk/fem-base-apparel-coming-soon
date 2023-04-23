@@ -7,14 +7,14 @@
 }
 
 #banner-image {
-  height: 30rem;
+  height: 25rem;
   background-image: url("../assets/images/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #banner-message {
-  padding: 3rem;
+  padding: 5rem;
   text-align: center;
   background: var(--clr-gr-1);
 }
@@ -22,12 +22,71 @@
 #banner-message > h1 {
   text-transform: uppercase;
   font-size: var(--fs-heading);
+  line-height: 3.5rem;
+  letter-spacing: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+#banner-message > p {
+  width: 30ch;
+  margin: auto;
+  margin-bottom: 1.8rem;
+}
+
+#banner-form {
+}
+
+#banner-form .input-group {
+  height: 4rem;
+  position: relative;
+}
+
+#banner-form input[type="email"] {
+  height: 100%;
+  padding: 0.5rem 8rem 0.5rem 1.5rem;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--clr-pr-1);
+  border-radius: var(--brdr-radius);
+}
+
+#banner-form input[type="email"]::placeholder {
+  color: var(--clr-pr-1);
+  text-transform: capitalize;
+}
+
+#banner-form input[type="email"]:focus {
+  outline: none;
+}
+
+#banner-form button[type="submit"] {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  padding: 0 3rem;
+  border-radius: var(--brdr-radius);
+  border: transparent;
+  background: var(--clr-gr-2);
+}
+
+#banner-form button[type="submit"] img {
+}
+
+#banner-form .input-group.error > img {
+  position: absolute;
+  right: 8rem;
+  top: 0.8rem;
 }
 
 @media screen and (min-width: 992px) {
   .cs-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    max-width: none;
+    border: 2px solid green;
   }
 
   #banner-image {

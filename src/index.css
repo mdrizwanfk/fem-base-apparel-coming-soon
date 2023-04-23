@@ -20,6 +20,8 @@
   --clr-neu-1: hsl(0, 6%, 24%);
   --clr-gr-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   --clr-gr-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+  --brdr-radius: 2rem;
 }
 
 /* Large Viewports */
@@ -148,9 +150,16 @@ body {
 
 /* classes that are used inside data - injected using dangerouslySetInnerHTML */
 .data-injected-heading-pt-1 {
+  display: block;
   font-weight: var(--fw-300);
 }
 
 .data-injected-heading-pt-2 {
-  font-weight: var(--fw-400);
+  display: block;
+  font-weight: var(--fw-600);
+}
+
+.data-injected-heading-pt-3 {
+  display: block;
+  font-weight: var(--fw-600);
 }
