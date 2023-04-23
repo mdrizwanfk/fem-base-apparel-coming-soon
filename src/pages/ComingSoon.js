@@ -5,11 +5,12 @@ import data from "../data/constants.json";
 import styles from "./ComingSoon.module.css";
 import iconArrow from "../assets/images/icon-arrow.svg";
 
-const BannerMessage = ({ heading, message }) => {
+const BannerCTA = ({ heading, message }) => {
   return (
-    <article id={styles["banner-message"]} className="text-clr-pr-2">
+    <article id={styles["banner-message"]} className="text-clr-pr-1">
       <h1 dangerouslySetInnerHTML={{ __html: heading || "lorem ipsum" }}></h1>
       <p>{message || "ipsum lorem"}</p>
+      <BannerForm />
     </article>
   );
 };
@@ -49,8 +50,7 @@ const ComingSoon = () => {
       <Header contained />
       <section className={styles["cs-grid"]}>
         <BannerImage />
-        <BannerMessage heading={heading} message={message} />
-        <BannerForm />
+        <BannerCTA heading={heading} message={message} />
       </section>
     </main>
   );
