@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/images/logo.svg";
 import styles from "./Header.module.css";
 
-const Header = ({ contained = false }) => {
+const Header = () => {
   return (
     <header className={styles["container"]}>
       <img src={logo} alt="base apparel logo" />

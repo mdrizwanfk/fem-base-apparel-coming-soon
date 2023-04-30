@@ -163,3 +163,9 @@ body {
   display: block;
   font-weight: var(--fw-600);
 }
+
+@media screen and (min-width: 992px) {
+  body {
+    justify-content: stretch;
+  }
+}

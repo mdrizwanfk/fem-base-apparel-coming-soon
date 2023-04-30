@@ -85,17 +85,19 @@
   }
 
   .container {
-    max-width: none;
-    border: 2px solid green;
+    max-width: 144rem;
+    margin: auto;
   }
 
   #banner-image {
     order: 2;
-    height: 5rem;
-    border: 5px solid green;
+    height: 100%;
+    background-image: url("../assets/images/hero-desktop.jpg");
   }
 
   #banner-message {
     order: 1;
+    align-self: flex-start;
+    height: 80rem;
   }
 }

@@ -9,6 +9,7 @@ import iconError from "../assets/images/icon-error.svg";
 const BannerCTA = ({ heading, message, onSubmit }) => {
   return (
     <article id={styles["banner-message"]} className="text-clr-pr-1">
+      <Header />
       <h1 dangerouslySetInnerHTML={{ __html: heading || "lorem ipsum" }}></h1>
       <p>{message || "ipsum lorem"}</p>
       <BannerForm onSubmit={onSubmit} />
