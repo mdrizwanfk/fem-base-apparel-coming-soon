@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import Header from "../components/Header";
 import data from "../data/constants.json";
@@ -6,10 +6,13 @@ import styles from "./ComingSoon.module.css";
 import iconArrow from "../assets/images/icon-arrow.svg";
 import iconError from "../assets/images/icon-error.svg";
 
+import WindowContext from "../store/window-context";
+
 const BannerCTA = ({ heading, message, onSubmit }) => {
+  const ctx = useContext(WindowContext);
   return (
     <article id={styles["banner-message"]} className="text-clr-pr-1">
-      <Header />
+      {ctx.isDesktop && <Header />}
       <h1 dangerouslySetInnerHTML={{ __html: heading || "lorem ipsum" }}></h1>
       <p>{message || "ipsum lorem"}</p>
       <BannerForm onSubmit={onSubmit} />
@@ -68,6 +71,8 @@ const BannerForm = ({ onSubmit }) => {
 };
 
 const ComingSoon = () => {
+  const ctx = useContext(WindowContext);
+
   const id = "comingSoon";
   const { config } = data.pages.find(({ id: configId }) => configId === id);
   const { heading, message } = config;
@@ -78,7 +83,7 @@ const ComingSoon = () => {
 
   return (
     <main className={styles["container"]}>
-      <Header contained />
+      {!ctx.isDesktop && <Header />}
       <section className={styles["cs-grid"]}>
         <BannerImage />
         <BannerCTA heading={heading} message={message} onSubmit={onSubmit} />
