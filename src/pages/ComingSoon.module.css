@@ -81,11 +81,12 @@
 @media screen and (min-width: 992px) {
   .cs-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 5fr 4fr;
   }
 
   .container {
-    max-width: 144rem;
+    /* max-width: 144rem; */
+    max-width: none;
     margin: auto;
   }
 
@@ -98,6 +99,6 @@
   #banner-message {
     order: 1;
     align-self: flex-start;
-    height: 80rem;
+    min-height: 100vh;
   }
 }
