@@ -69,6 +69,14 @@
   background: var(--clr-gr-2);
 }
 
+#banner-form button[type="submit"]:enabled {
+  cursor: pointer;
+}
+
+#banner-form button[type="submit"]:disabled {
+  opacity: 0.5;
+}
+
 #banner-form button[type="submit"] img {
 }
 
@@ -76,6 +84,19 @@
   position: absolute;
   right: 8rem;
   top: 0.8rem;
+}
+
+#help-text {
+  font-size: calc(var(--fs-body) - 0.5rem);
+  padding: 0.5rem 8rem 0.5rem 1.5rem;
+}
+
+#banner-form .input-group.success #help-text {
+  color: var(--clr-success);
+}
+
+#banner-form .input-group.error #help-text {
+  color: var(--clr-error);
 }
 
 @media screen and (min-width: 992px) {
@@ -117,7 +138,7 @@
   #banner-message > p {
     width: unset;
     margin: unset;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
   }
 
   #banner-form .input-group {
@@ -128,6 +149,7 @@
   #banner-form input[type="email"] {
     padding-left: 3rem;
     padding-right: 16rem;
+    margin-bottom: 1rem;
   }
 
   #banner-form input[type="email"]::placeholder {
@@ -138,6 +160,14 @@
 
   #banner-form input[type="email"]:focus {
     outline: none;
+  }
+
+  #banner-form .input-group.error input[type="email"] {
+    border: 0.3rem solid var(--clr-error);
+  }
+
+  #banner-form .input-group.success input[type="email"] {
+    border: 0.3rem solid var(--clr-success);
   }
 
   #banner-form button[type="submit"] {
@@ -152,7 +182,12 @@
 
   #banner-form .input-group.error > img {
     position: absolute;
-    right: 8rem;
-    top: 1.8rem;
+    right: 12rem;
+    top: 1.5rem;
+    height: 3rem;
+  }
+
+  #help-text {
+    padding: 0 3rem;
   }
 }

@@ -20,6 +20,8 @@
   --clr-neu-1: hsl(0, 6%, 24%);
   --clr-gr-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   --clr-gr-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  --clr-success: hsl(116, 46%, 49%);
+  --clr-error: hsl(0, 93%, 68%);
 
   --brdr-radius: 2rem;
 }

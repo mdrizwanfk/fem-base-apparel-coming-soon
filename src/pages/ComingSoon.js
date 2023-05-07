@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 
+import isEmail from "validator/lib/isEmail";
+
 import Header from "../components/Header";
 import data from "../data/constants.json";
 import styles from "./ComingSoon.module.css";
@@ -34,21 +36,39 @@ const BannerImage = () => {
 };
 
 const BannerForm = ({ onSubmit }) => {
-  const [helpText, setHelpText] = useState("help text");
-  const [errors, setErrors] = useState({ email: false });
+  const [helpText, setHelpText] = useState("");
+  const [errors, setErrors] = useState({ email: undefined });
+  const [isSubmitEnabled, setIsSubmitEnabled] = useState(false);
 
   const onSubmitPreProcess = (e) => {
     e.preventDefault();
     const enteredEmail = e.target["email"].value;
-    if (enteredEmail.includes("@") && enteredEmail.includes(".")) {
+    console.log("button clicked? ", enteredEmail);
+
+    if (enteredEmail.length === 0) {
+      setHelpText("This field can't be empty.");
+      setErrors({ email: true });
+    }
+
+    if (!isEmail(enteredEmail)) {
+      setHelpText("Please provide a valid email");
+      setErrors({ email: true });
+    } else {
       const postObj = {
         email: enteredEmail,
       };
       onSubmit(postObj);
-    } else {
-      setHelpText("Please provide a valid email");
-      setErrors({ email: true });
+
+      setHelpText(`Success! You'll not be notified on ${enteredEmail}.`);
+      setErrors({ email: false });
     }
+  };
+
+  const emailChangeHandler = (e) => {
+    const enteredEmail = e.target.value;
+    setIsSubmitEnabled(enteredEmail.length > 0);
+    setHelpText("");
+    setErrors({ email: undefined });
   };
 
   return (
@@ -56,20 +76,25 @@ const BannerForm = ({ onSubmit }) => {
       <label htmlFor="email"></label>
       <div
         className={`${styles["input-group"]} ${
-          errors.email ? styles["error"] : ""
+          errors.email === true
+            ? styles["error"]
+            : errors.email === false
+            ? styles["success"]
+            : ""
         }`}
       >
         <input
           type="email"
           id="email"
           placeholder="email address"
+          onChange={emailChangeHandler}
           maxLength={55}
         />
         {errors.email && <img src={iconError} alt="error" />}
-        <button type="submit">
+        <button type="submit" disabled={!isSubmitEnabled}>
           <img src={iconArrow} alt="submit" />
         </button>
-        {errors.email && <p>{helpText}</p>}
+        <p id={styles["help-text"]}>{helpText}</p>
       </div>
     </form>
   );
