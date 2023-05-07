@@ -85,8 +85,7 @@
   }
 
   .container {
-    /* max-width: 144rem; */
-    max-width: none;
+    max-width: 160rem;
     margin: auto;
   }
 
@@ -94,11 +93,66 @@
     order: 2;
     height: 100%;
     background-image: url("../assets/images/hero-desktop.jpg");
+    /* background-size: contain; */
   }
 
   #banner-message {
     order: 1;
     align-self: flex-start;
     min-height: 100vh;
+    text-align: left;
+    padding: 5rem 15rem;
+    background: url("../assets/images/bg-pattern-desktop.svg");
+    background-color: var(--clr-gr-2);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #banner-message > h1 {
+    line-height: 5.8rem;
+    letter-spacing: 2rem;
+    margin-bottom: 2.2rem;
+  }
+
+  #banner-message > p {
+    width: unset;
+    margin: unset;
+    margin-bottom: 4rem;
+  }
+
+  #banner-form .input-group {
+    height: 6rem;
+    position: relative;
+  }
+
+  #banner-form input[type="email"] {
+    padding-left: 3rem;
+    padding-right: 16rem;
+  }
+
+  #banner-form input[type="email"]::placeholder {
+    color: var(--clr-pr-1);
+    text-transform: capitalize;
+    opacity: 0.5;
+  }
+
+  #banner-form input[type="email"]:focus {
+    outline: none;
+  }
+
+  #banner-form button[type="submit"] {
+    padding: 0 5rem;
+    border-radius: var(--brdr-radius);
+    border: transparent;
+    background: var(--clr-gr-2);
+  }
+
+  #banner-form button[type="submit"] img {
+  }
+
+  #banner-form .input-group.error > img {
+    position: absolute;
+    right: 8rem;
+    top: 1.8rem;
   }
 }

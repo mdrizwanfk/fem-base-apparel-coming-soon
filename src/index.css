@@ -27,6 +27,10 @@
 /* Large Viewports */
 @media screen and (min-width: 992px) {
   :root {
+    --fs-body: 2rem;
+    --fs-heading: 5rem;
+
+    --brdr-radius: 5rem;
   }
 }
 
