@@ -3,7 +3,6 @@
 }
 
 .container {
-  max-width: 55rem;
 }
 
 #banner-image {
@@ -43,20 +42,30 @@
 
 #banner-form input[type="email"] {
   height: 100%;
-  padding: 0.5rem 8rem 0.5rem 1.5rem;
+  padding: 0.5rem 10rem 0.5rem 1.5rem;
   width: 100%;
   background-color: transparent;
   border: 1px solid var(--clr-pr-1);
   border-radius: var(--brdr-radius);
+  margin-bottom: 0.8rem;
 }
 
 #banner-form input[type="email"]::placeholder {
   color: var(--clr-pr-1);
   text-transform: capitalize;
+  opacity: 0.5;
 }
 
 #banner-form input[type="email"]:focus {
   outline: none;
+}
+
+#banner-form .input-group.error input[type="email"] {
+  border: 0.3rem solid var(--clr-error);
+}
+
+#banner-form .input-group.success input[type="email"] {
+  border: 0.3rem solid var(--clr-success);
 }
 
 #banner-form button[type="submit"] {
@@ -77,9 +86,6 @@
   opacity: 0.5;
 }
 
-#banner-form button[type="submit"] img {
-}
-
 #banner-form .input-group.error > img {
   position: absolute;
   right: 8rem;
@@ -88,7 +94,6 @@
 
 #help-text {
   font-size: calc(var(--fs-body) - 0.5rem);
-  padding: 0.5rem 8rem 0.5rem 1.5rem;
 }
 
 #banner-form .input-group.success #help-text {
@@ -143,7 +148,6 @@
 
   #banner-form .input-group {
     height: 6rem;
-    position: relative;
   }
 
   #banner-form input[type="email"] {
@@ -152,36 +156,11 @@
     margin-bottom: 1rem;
   }
 
-  #banner-form input[type="email"]::placeholder {
-    color: var(--clr-pr-1);
-    text-transform: capitalize;
-    opacity: 0.5;
-  }
-
-  #banner-form input[type="email"]:focus {
-    outline: none;
-  }
-
-  #banner-form .input-group.error input[type="email"] {
-    border: 0.3rem solid var(--clr-error);
-  }
-
-  #banner-form .input-group.success input[type="email"] {
-    border: 0.3rem solid var(--clr-success);
-  }
-
   #banner-form button[type="submit"] {
     padding: 0 5rem;
-    border-radius: var(--brdr-radius);
-    border: transparent;
-    background: var(--clr-gr-2);
-  }
-
-  #banner-form button[type="submit"] img {
   }
 
   #banner-form .input-group.error > img {
-    position: absolute;
     right: 12rem;
     top: 1.5rem;
     height: 3rem;
