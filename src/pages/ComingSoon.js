@@ -59,7 +59,12 @@ const BannerForm = ({ onSubmit }) => {
           errors.email ? styles["error"] : ""
         }`}
       >
-        <input type="email" id="email" placeholder="email address" />
+        <input
+          type="email"
+          id="email"
+          placeholder="email address"
+          maxLength={55}
+        />
         {errors.email && <img src={iconError} alt="error" />}
         <button type="submit">
           <img src={iconArrow} alt="submit" />
