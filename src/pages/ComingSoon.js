@@ -43,7 +43,6 @@ const BannerForm = ({ onSubmit }) => {
   const onSubmitPreProcess = (e) => {
     e.preventDefault();
     const enteredEmail = e.target["email"].value;
-    console.log("button clicked? ", enteredEmail);
 
     if (enteredEmail.length === 0) {
       setHelpText("This field can't be empty.");
@@ -107,9 +106,7 @@ const ComingSoon = () => {
   const { config } = data.pages.find(({ id: configId }) => configId === id);
   const { heading, message } = config;
 
-  const onSubmit = ({ email }) => {
-    console.log("email", email);
-  };
+  const onSubmit = ({ email }) => {};
 
   return (
     <main className={styles["container"]}>
