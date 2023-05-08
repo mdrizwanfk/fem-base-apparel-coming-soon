@@ -76,6 +76,19 @@
   border-radius: var(--brdr-radius);
   border: transparent;
   background: var(--clr-gr-2);
+  opacity: 0.7;
+}
+
+#banner-form button[type="submit"]:enabled:hover {
+  transition: 300ms;
+  box-shadow: 0.1rem 0.1rem 1rem var(--clr-pr-2);
+  opacity: 1;
+}
+
+#banner-form button[type="submit"]:enabled:active {
+  transition: 300ms;
+  box-shadow: none;
+  opacity: 0.7;
 }
 
 #banner-form button[type="submit"]:enabled {
@@ -84,6 +97,7 @@
 
 #banner-form button[type="submit"]:disabled {
   opacity: 0.5;
+  cursor: not-allowed;
 }
 
 #banner-form .input-group.error > img {
