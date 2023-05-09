@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fem-base-apparel-coming-soon/static/css/main.a6afeafc.css",
+    "main.js": "/fem-base-apparel-coming-soon/static/js/main.2717721f.js",
+    "static/media/hero-desktop.jpg": "/fem-base-apparel-coming-soon/static/media/hero-desktop.659bc9a7221d265fe28f.jpg",
+    "static/media/JosefinSans-SemiBold-600.ttf": "/fem-base-apparel-coming-soon/static/media/JosefinSans-SemiBold-600.2a451041fef63c2b15a4.ttf",
+    "static/media/JosefinSans-Light-300.ttf": "/fem-base-apparel-coming-soon/static/media/JosefinSans-Light-300.7d788b889d3f61f984c8.ttf",
+    "static/media/JosefinSans-Regular-400.ttf": "/fem-base-apparel-coming-soon/static/media/JosefinSans-Regular-400.0e82e3d2c82cf1e38a33.ttf",
+    "static/media/hero-mobile.jpg": "/fem-base-apparel-coming-soon/static/media/hero-mobile.1afd055b71b78462d388.jpg",
+    "static/media/logo.svg": "/fem-base-apparel-coming-soon/static/media/logo.bfe35add16fb8c010b0231ce711541c6.svg",
+    "index.html": "/fem-base-apparel-coming-soon/index.html",
+    "static/media/bg-pattern-desktop.svg": "/fem-base-apparel-coming-soon/static/media/bg-pattern-desktop.964ebd4dd8014fd040d7.svg",
+    "static/media/icon-error.svg": "/fem-base-apparel-coming-soon/static/media/icon-error.77009af74a9c193a398a6476b25aa1f3.svg",
+    "static/media/icon-arrow.svg": "/fem-base-apparel-coming-soon/static/media/icon-arrow.4b3d2d93cd838720beda936cd05c7382.svg",
+    "main.a6afeafc.css.map": "/fem-base-apparel-coming-soon/static/css/main.a6afeafc.css.map",
+    "main.2717721f.js.map": "/fem-base-apparel-coming-soon/static/js/main.2717721f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6afeafc.css",
+    "static/js/main.2717721f.js"
+  ]
+}
